@@ -4,8 +4,8 @@ import { TableApp } from "~/integrations/react/mui";
 
 export const mongo = async () => {
   await fetch(
-    "https://localhost:8888/.netlify/functions/get_contacts"
-    // "https://shimmering-blini-920323.netlify.app/.netlify/functions/get_contacts"
+    // "https://localhost:8888/.netlify/functions/get_contacts"
+    "https://shimmering-blini-920323.netlify.app/.netlify/functions/get_contacts"
   )
     .then((res) => {
       console.log("MongoRes", res);
