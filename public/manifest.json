@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "qwik-project-name",
+  "short_name": "SSG Qwik+React+MongoDB+Netlify",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Qwik app with netlify edge functions to MongoDB."
+}
