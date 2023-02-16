@@ -32,7 +32,7 @@ const handler = async () => {
       .db(DB_NAME)
     const collection = database.collection(MONGODB_COLLECTION);
     console.log("[db] Conectada con éxito", collection, MONGODB_COLLECTION);
-    const results = await collection.find({}).toArray();
+    const results = await collection.find().toArray();
     console.log("mongoClient", results);
     return {
       statusCode: 200,

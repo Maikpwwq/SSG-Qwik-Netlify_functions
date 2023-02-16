@@ -49,7 +49,7 @@ const handler = async (request, context) => {
     const database = (await clientPromise); // (await clientPromise).db(DB_NAME);
     console.log("[db] Conectada con éxito", database);
     const collection = database.collection(MONGODB_COLLECTION);
-    const results = await collection.find({}).toArray();
+    const results = await collection.find().toArray();
     // Response.json
     return new Response(JSON.stringify(results), {
       status: 200,
