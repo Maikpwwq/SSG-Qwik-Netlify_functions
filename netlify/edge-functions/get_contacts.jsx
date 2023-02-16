@@ -1,18 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 // import type { Handler } from "@netlify/functions"; // , HandlerEvent, HandlerContext
-// import { MongoClient } from "mongodb"; // , ServerApiVersion
-// import * as dotenv from "dotenv";
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 // import "https://deno.land/x/dotenv/load.ts";
-
-import { MongoClient } from "https://deno.land/x/mongo@v0.31.1/mod.ts";
+import { MongoClient } from "https://deno.land/x/mongo@v0.31.1/mod.ts"; // , ServerApiVersion
 // "https://deno.land/x/atlas_sdk@v1.1.0/mod.ts";
 // https://deno.land/x/mongo@v0.31.1/mod.ts;
 // import { Config } from "https://edge.netlify.com"
-// import { config } from "dotenv";
-// const { Handler } = require("@netlify/functions");
-//const { MongoClient } = require("mongodb");
-// require("dotenv").config();
 
 const configData = await config();
 
@@ -48,21 +41,9 @@ const mongoClient = new MongoClient();
 
 const clientPromise = mongoClient.connect(MONGO_HOST); // , {}
 
-// let connection = null;
-
 // export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
 const handler = async (request, context) => {
-  // exports.handler = async () => {
-  // const { name = 'stranger' } = event.queryStringParameters
 
-  // return {
-  //   statusCode: 200,
-  //   body: JSON.stringify({
-  //     message: `Hello, ${name}!`,
-  //   }),
-  // }
-
-  //   if (connection) return connection;
   console.log("ho");
   try {
     const database = (await clientPromise); // (await clientPromise).db(DB_NAME);
@@ -85,6 +66,4 @@ const handler = async (request, context) => {
 };
 
 export default handler;
-// const config = { path: "/get_contacts" }
-// export { mongoClient, handler };
-// handler().catch(console.dir);
+
