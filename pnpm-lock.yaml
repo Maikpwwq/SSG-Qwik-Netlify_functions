@@ -15,6 +15,7 @@ specifiers:
   '@types/react-dom': 18.0.5
   '@typescript-eslint/eslint-plugin': 5.51.0
   '@typescript-eslint/parser': 5.51.0
+  dotenv: ^16.0.3
   eslint: 8.33.0
   eslint-plugin-qwik: 0.18.1
   mongodb: ^5.0.1
@@ -29,6 +30,7 @@ specifiers:
   vite-tsconfig-paths: 3.5.0
 
 dependencies:
+  dotenv: 16.0.3
   mongodb: 5.0.1
 
 devDependencies:
@@ -4008,7 +4010,6 @@ packages:
   /dotenv/16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
-    dev: true
 
   /download/8.0.0:
     resolution: {integrity: sha512-ASRY5QhDk7FK+XrQtQyvhpDKanLluEEQtWl/J7Lxuf/b+i8RYh997QeXvL85xitrmRKVlx9c7eTrcRdq2GS4eA==}

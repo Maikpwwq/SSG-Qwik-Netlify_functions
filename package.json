@@ -49,6 +49,7 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "mongodb": "^5.0.1"
   }
 }

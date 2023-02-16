@@ -25,7 +25,7 @@ export default component$(() => {
   return (
     <>
       <h1>Qwik/React/Netlify/MongoDB</h1>
-      {mongo_data} {response}
+      {mongo_data} - {response}
       <TableApp client:visible>Slider is {count.value}</TableApp>
       {/* <MUIButton variant={variant.value} host:onClick$={() => alert('click')}>
         Slider is {count.value}
