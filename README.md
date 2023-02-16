@@ -1,4 +1,7 @@
-# Qwik City App ⚡️
+# Qwik City App ⚡️ 
+
+- [Netlify Deploy](https://shimmering-blini-920323.netlify.app)
+
 
 - [Qwik Docs](https://qwik.builder.io/)
 - [Discord](https://qwik.builder.io/chat)

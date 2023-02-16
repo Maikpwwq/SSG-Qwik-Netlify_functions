@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "App with Routing built-in (recommended)",
+  "name": "qwik-netlify-mongodb",
+  "description": "Qwik app with netlify edge functions to MongoDB.",
   "engines": {
     "node": ">=15.0.0"
   },
@@ -38,7 +38,7 @@
     "@typescript-eslint/parser": "5.51.0",
     "eslint": "8.33.0",
     "eslint-plugin-qwik": "0.18.1",
-    "netlify-cli": "^12.0.11",
+    "netlify-cli": "^12.12.1",
     "node-fetch": "3.3.0",
     "prettier": "2.8.4",
     "react": "18.2.0",
