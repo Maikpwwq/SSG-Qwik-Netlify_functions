@@ -63,6 +63,7 @@ const handler = async (request, context) => {
   // }
 
   //   if (connection) return connection;
+  console.log("ho");
   try {
     const database = (await clientPromise); // (await clientPromise).db(DB_NAME);
     console.log("[db] Conectada con éxito", database);

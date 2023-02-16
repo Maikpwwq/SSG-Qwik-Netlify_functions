@@ -9,7 +9,7 @@ export const mongo = async () => {
   )
     .then((res) => {
       console.log("MongoRes", res);
-      res.json();
+      // res.json();
     })
     .then((docs) => {
       console.log("My-docs", docs);
@@ -19,7 +19,7 @@ export const mongo = async () => {
 export default component$(() => {
   const count = useSignal(0);
   const mongo_data = useSignal(mongo) || "";
-  const response = useResource$(mongo);
+  const response = useResource$(mongo)|| "";
 
 
   return (
