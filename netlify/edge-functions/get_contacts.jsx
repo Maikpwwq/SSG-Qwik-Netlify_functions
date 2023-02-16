@@ -43,19 +43,20 @@ const clientPromise = mongoClient.connect(MONGO_HOST); // , {}
 
 // export const handler: Handler = async (event: HandlerEvent, context: HandlerContext) => {
 const handler = async (request, context) => {
-
   console.log("ho");
   try {
-    const database = (await clientPromise); // (await clientPromise).db(DB_NAME);
+    const database = await clientPromise; // (await clientPromise).db(DB_NAME);
     console.log("[db] Conectada con éxito", database);
     const collection = database.collection(MONGODB_COLLECTION);
     const results = await collection.find().toArray();
-    console.log("mongoClient", results);
-    // Response.json
-    return new Response(JSON.stringify(results), {
-      status: 200,
-      // headers: { "content-type": "text/html" },
-    });
+    if (results.length > 0) {
+      console.log("mongoClient", results);
+      // Response.json
+      return new Response(JSON.stringify(results), {
+        status: 200,
+        // headers: { "content-type": "text/html" },
+      });
+    }
   } catch (err) {
     console.error("[db] Error", MONGO_HOST, err);
     return new Response(err.toString(), { status: 500 }); //
@@ -67,4 +68,3 @@ const handler = async (request, context) => {
 };
 
 export default handler;
-

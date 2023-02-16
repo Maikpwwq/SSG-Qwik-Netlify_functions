@@ -28,16 +28,17 @@ const handler = async () => {
   try {
     //await
     //mongoClient.connect( async (err) => {
-    const database = (await clientPromise)
-      .db(DB_NAME)
+    const database = (await clientPromise).db(DB_NAME);
     const collection = database.collection(MONGODB_COLLECTION);
     console.log("[db] Conectada con éxito", collection, MONGODB_COLLECTION);
     const results = await collection.find().toArray();
-    console.log("mongoClient", results);
-    return {
-      statusCode: 200,
-      body: JSON.stringify(results),
-    };
+    if (results.length > 0) {
+      console.log("mongoClient", results);
+      return {
+        statusCode: 200,
+        body: JSON.stringify(results),
+      };
+    }
   } catch (err) {
     console.error("[db] Error", MONGO_HOST, err);
     return { statusCode: 500, body: err.toString() };

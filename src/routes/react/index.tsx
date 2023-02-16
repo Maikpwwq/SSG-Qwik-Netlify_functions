@@ -1,4 +1,4 @@
-import { component$, useSignal, useResource$, useBrowserVisibleTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useResource$ } from "@builder.io/qwik"; // , useBrowserVisibleTask$
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { TableApp } from "~/integrations/react/mui";
 
@@ -21,9 +21,9 @@ export default component$(() => {
   const mongo_data = useSignal(mongo) || "";
   const response = useResource$(mongo)|| "";
 
-  useBrowserVisibleTask$(() => {
-    console.log("finalData", response.loading, response.value); //.value
-  });
+  // useBrowserVisibleTask$(() => {
+  //   console.log("finalData", response.loading, response.value); //.value
+  // });
 
   return (
     <>
