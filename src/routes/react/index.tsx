@@ -1,6 +1,6 @@
 import { component$, useSignal, useResource$ } from "@builder.io/qwik"; // , useBrowserVisibleTask$
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { TableApp } from "~/integrations/react/mui";
+// import { TableApp } from "~/integrations/react/mui";
 
 export const mongo = async () => {
   await fetch(
@@ -16,10 +16,13 @@ export const mongo = async () => {
     });
 };
 
+// export const mongoDataFetch = mongo();
+// console.log("finalData", mongoDataFetch);
+
 export default component$(() => {
-  const count = useSignal(0);
+  // const count = useSignal(0);
   const mongo_data = useSignal(mongo) || "";
-  const response = useResource$(mongo)|| "";
+  const response = useResource$(mongo) || "";
 
   // useBrowserVisibleTask$(() => {
   //   console.log("finalData", response.loading, response.value); //.value
@@ -29,7 +32,7 @@ export default component$(() => {
     <>
       <h1>Qwik/React/Netlify/MongoDB</h1>
       {mongo_data} - {response}
-      <TableApp client:visible>Slider is {count.value}</TableApp>
+      {/* <TableApp client:visible>Slider is {count.value}</TableApp> */}
       {/* <MUIButton variant={variant.value} host:onClick$={() => alert('click')}>
         Slider is {count.value}
       </MUIButton> */}
