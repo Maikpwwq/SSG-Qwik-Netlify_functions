@@ -50,6 +50,7 @@ const handler = async (request, context) => {
     console.log("[db] Conectada con éxito", database);
     const collection = database.collection(MONGODB_COLLECTION);
     const results = await collection.find().toArray();
+    console.log("mongoClient", results);
     // Response.json
     return new Response(JSON.stringify(results), {
       status: 200,
