@@ -13,7 +13,7 @@ const MONGODB_COLLECTION = `${process.env.VITE_MONGODB_COLLECTION}`;
 
 const MONGO_HOST = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}?retryWrites=true&w=majority`;
 
-console.log("MONGO_HOST", MONGO_HOST);
+console.log("MONGOOSE_HOST", MONGO_HOST);
 const clientPromise = mongoClient.connect(MONGO_HOST);
 
 const handler = async () => {
