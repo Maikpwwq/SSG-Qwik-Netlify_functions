@@ -13,7 +13,7 @@ const MONGODB_COLLECTION = `${process.env.VITE_MONGODB_COLLECTION}`;
 
 const MONGO_HOST = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
 
-const schema = new mongoose.Schema({ name: "string", access: "string" });
+const schema = new mongoose.Schema({ name: "string", email: "string" });
 
 console.log("MONGOOSE_HOST", MONGO_HOST);
 const clientPromise = mongoose.createConnection(MONGO_HOST, {
@@ -23,17 +23,19 @@ const clientPromise = mongoose.createConnection(MONGO_HOST, {
 // const clientPromise = mongoose.connect(MONGO_HOST);
 
 const Contactos = clientPromise.model(MONGODB_COLLECTION, schema);
-console.log("Contactos", Contactos);
+const DB = new Contactos();
+console.log("Contactos", DB);
 
 const handler = async () => {
-  console.log("hi");
+  console.log("hi mongoose");
   try {
     //await
     //mongoClient.connect( async (err) => {
-    Contactos.find({}, function (err, docs) {
+    DB.find({}, function (err, docs) {
+      if (!err) console.log("Success!");
       // docs.forEach
       console.log("docs", docs);
-      const results = docs
+      const results = docs;
       if (results.length > 0) {
         console.log("mongoClient", results);
         return {
