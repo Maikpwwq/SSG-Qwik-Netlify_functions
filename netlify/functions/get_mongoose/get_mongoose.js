@@ -16,7 +16,7 @@ const MONGO_HOST = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?re
 const schema = new mongoose.Schema({ name: "string", access: "string" });
 
 console.log("MONGOOSE_HOST", MONGO_HOST);
-const clientPromise = await mongoose.createConnection(MONGO_HOST, {
+const clientPromise = mongoose.createConnection(MONGO_HOST, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
