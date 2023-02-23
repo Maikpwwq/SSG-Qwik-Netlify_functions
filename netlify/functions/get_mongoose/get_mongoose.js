@@ -11,14 +11,13 @@ const DB_HOST = `${process.env.VITE_DB_HOST}`;
 const DB_NAME = `${process.env.VITE_DB_NAME}`;
 const MONGODB_COLLECTION = `${process.env.VITE_MONGODB_COLLECTION}`;
 
-const MONGO_HOST = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
+const MONGO_HOST = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/?retryWrites=true&w=majority`;
 
 const schema = new mongoose.Schema({ name: "string", email: "string" });
 
 console.log("MONGOOSE_HOST", MONGO_HOST);
 const clientPromise = mongoose.createConnection(MONGO_HOST, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
+  dbName: DB_NAME,
 });
 // const clientPromise = mongoose.connect(MONGO_HOST);
 
