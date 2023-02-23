@@ -21,7 +21,7 @@ const clientPromise = mongoose.createConnection(
   {
     dbName: DB_NAME,
     useNewUrlParser: true,
-    useCreateIndex: true,
+    // useCreateIndex: true, No suported
     useUnifiedTopology: true,
   },
   function (err) {
@@ -38,7 +38,7 @@ console.log("Contactos", DB);
 const handler = async () => {
   console.log("hi mongoose");
   try {
-    const results = await Contactos.find({}).toArray();
+    const results = await Contactos.find({}); // .toArray();
     // You don't need callbacks in Mongoose, because Mongoose supports promises and async/await.
     // , function (err, docs) { if (err) console.log("Error getting the data", err);
     // docs.forEach
