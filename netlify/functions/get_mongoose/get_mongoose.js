@@ -36,9 +36,9 @@ const Contactos = clientPromise.model(MONGODB_COLLECTION, schema);
 const handler = async () => {
   console.log("hi mongoose");
   try {
-    await Contactos.find({}).clone().then((res) => {
+    await Contactos.find().exec().then((res) => {
       console.log("res", res);
-    }); // .toArray();
+    }); // .toArray(); .exec() .clone()
     // You don't need callbacks in Mongoose, because Mongoose supports promises and async/await.
     // , function (err, docs) { if (err) console.log("Error getting the data", err);
     // docs.forEach
