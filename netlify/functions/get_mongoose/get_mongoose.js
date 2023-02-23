@@ -31,7 +31,7 @@ const handler = async () => {
   try {
     //await
     //mongoClient.connect( async (err) => {
-    Contactos.find({}, function (err, docs) {
+    await Contactos.find({}, function (err, docs) {
       if (!err) console.log("Success!");
       // docs.forEach
       console.log("docs", docs);
