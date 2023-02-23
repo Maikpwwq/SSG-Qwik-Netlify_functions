@@ -11,7 +11,7 @@ const DB_HOST = `${process.env.VITE_DB_HOST}`;
 const DB_NAME = `${process.env.VITE_DB_NAME}`;
 const MONGODB_COLLECTION = `${process.env.VITE_MONGODB_COLLECTION}`;
 
-const MONGO_HOST = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
+const MONGO_HOST = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}${DB_NAME}?retryWrites=true&w=majority`;
 
 const schema = new mongoose.Schema({ name: "string", email: "string" });
 
@@ -31,7 +31,7 @@ const handler = async () => {
   try {
     //await
     //mongoClient.connect( async (err) => {
-    Contactos.find({}, function (err, docs) {
+    await Contactos.find({}, function (err, docs) {
       if (!err) console.log("Success!");
       // docs.forEach
       console.log("docs", docs);
