@@ -19,7 +19,7 @@ specifiers:
   eslint: 8.34.0
   eslint-plugin-qwik: 0.19.0
   mongodb: ^5.0.1
-  mongoose: ^6.9.3
+  mongoose: ^6.10.0
   netlify-cli: ^13.0.0
   node-fetch: 3.3.0
   prettier: 2.8.4
@@ -33,7 +33,7 @@ specifiers:
 dependencies:
   dotenv: 16.0.3
   mongodb: 5.0.1
-  mongoose: 6.9.3
+  mongoose: 6.10.0
 
 devDependencies:
   '@builder.io/qwik': 0.19.0_undici@5.20.0
@@ -7983,8 +7983,8 @@ packages:
       whatwg-url: 11.0.0
     dev: false
 
-  /mongodb/4.13.0:
-    resolution: {integrity: sha512-+taZ/bV8d1pYuHL4U+gSwkhmDrwkWbH1l4aah4YpmpscMwgFBkufIKxgP/G7m87/NUuQzc2Z75ZTI7ZOyqZLbw==}
+  /mongodb/4.14.0:
+    resolution: {integrity: sha512-coGKkWXIBczZPr284tYKFLg+KbGPPLlSbdgfKAb6QqCFt5bo5VFZ50O3FFzsw4rnkqjwT6D8Qcoo9nshYKM7Mg==}
     engines: {node: '>=12.9.0'}
     dependencies:
       bson: 4.7.2
@@ -8019,13 +8019,13 @@ packages:
       saslprep: 1.0.3
     dev: false
 
-  /mongoose/6.9.3:
-    resolution: {integrity: sha512-WiuqEXblyd6NLASmTsdgkA3hEndf8CJ8qEEVt7QjSvyImNATn5J7mbPbbZMgFz2MvkPHnpqSbfjyxFoYSdTZOg==}
+  /mongoose/6.10.0:
+    resolution: {integrity: sha512-0zrKDEnmNscYyAyN94smo2LlJ63gaezKHpHM+KQ+6EiAgAnah5Kt3hQSYzOTQX/63YNdT1oJXiLlB5LqTdcjUw==}
     engines: {node: '>=12.0.0'}
     dependencies:
       bson: 4.7.2
       kareem: 2.5.1
-      mongodb: 4.13.0
+      mongodb: 4.14.0
       mpath: 0.9.0
       mquery: 4.0.3
       ms: 2.1.3
