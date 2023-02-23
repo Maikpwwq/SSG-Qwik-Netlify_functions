@@ -40,9 +40,10 @@ const handler = async () => {
       console.log("mongoDocs", docs);
       // if (docs.length > 0) {   
       // }
+      const response = docs;
       return {
         statusCode: 200,
-        body: JSON.stringify(docs),
+        body: JSON.stringify(response),
       };
     }); // .toArray(); .exec() .clone()
     // You don't need callbacks in Mongoose, because Mongoose supports promises and async/await.
