@@ -33,11 +33,12 @@ const clientPromise = mongoose.createConnection(
 
 const Contactos = clientPromise.model(MONGODB_COLLECTION, schema);
 
-const handler = async () => {
+// const handler = async () => {
+exports.handler = async () => {
   console.log("hi mongoose");
   try {
     await Contactos.find()
-      .exec()
+      // .exec()
       .then((docs) => {
         console.log("mongoDocs", docs);
         // if (docs.length > 0) {
@@ -62,4 +63,4 @@ const handler = async () => {
   }
 };
 
-export { clientPromise, handler };
+// export { clientPromise, handler };
