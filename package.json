@@ -23,22 +23,22 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "0.19.0",
-    "@builder.io/qwik-city": "0.3.0",
-    "@builder.io/qwik-react": "0.3.0",
+    "@builder.io/qwik": "0.20.0",
+    "@builder.io/qwik-city": "0.5.2",
+    "@builder.io/qwik-react": "0.4.2",
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
-    "@mui/material": "5.11.10",
-    "@mui/x-data-grid": "5.17.24",
+    "@mui/material": "5.11.11",
+    "@mui/x-data-grid": "5.17.25",
     "@types/eslint": "8.21.1",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.2",
     "@types/node-fetch": "latest",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "@typescript-eslint/eslint-plugin": "5.53.0",
-    "@typescript-eslint/parser": "5.53.0",
-    "eslint": "8.34.0",
-    "eslint-plugin-qwik": "0.19.0",
+    "@typescript-eslint/eslint-plugin": "5.54.0",
+    "@typescript-eslint/parser": "5.54.0",
+    "eslint": "8.35.0",
+    "eslint-plugin-qwik": "0.20.0",
     "netlify-cli": "^13.0.0",
     "node-fetch": "3.3.0",
     "prettier": "2.8.4",
@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "mongodb": "^5.0.1",
-    "mongoose": "^6.10.0"
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.0"
   }
 }

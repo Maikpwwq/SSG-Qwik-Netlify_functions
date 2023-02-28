@@ -8,7 +8,7 @@ export const mongo = async () => {
     "https://shimmering-blini-920323.netlify.app/.netlify/functions/get_mongoose"
   )
     .then((res) => {
-      console.log("MongoRes", res);
+      console.log("MongoRes", res, res.json());
       // res.json();
     })
     .then((docs) => {
@@ -21,8 +21,8 @@ export const mongo = async () => {
 
 export default component$(() => {
   // const count = useSignal(0);
-  const mongo_data = useSignal(mongo) || "";
-  const response = useResource$(mongo) || "";
+  const mongo_data = useSignal(mongo);
+  const response = useResource$(mongo);
 
   // useBrowserVisibleTask$(() => {
   //   console.log("finalData", response.loading, response.value); //.value
